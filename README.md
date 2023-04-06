@@ -19,7 +19,7 @@ It is calculated as,
 ![image](https://user-images.githubusercontent.com/103921593/192938463-e34177f4-f188-48a0-bda2-8f6d1d660ed2.png)
 
 The variance of a random variable shows the variability or the scatterings of the random variables.
-It shows the distance of a random variable from its mean. It is calcualted as
+It shows the distance of a random variable from its mean. It is calculated as
 
 ![image](https://user-images.githubusercontent.com/103921593/192938695-99fedc01-34d5-4d36-84df-5880e766ed0c.png)
 
@@ -49,39 +49,40 @@ It shows the distance of a random variable from its mean. It is calcualted as
 
 # Program :
 ```
-Developed By : SYED MUHAMMED ZAHI
-Reg. No. : 212221230114
-
-import numpy as np
-L=[int(i) for i in input().split()]
-N=len(L); M=max(L) 
-x=list();f=list()
-for i in range (M+1):
-    c = 0
-    for j in range(N):
-        if L[j]==i:
-            c=c+1
-    f.append(c)
-    x.append(i)
-sf=np.sum(f)
-p=list()
-for i in range(M+1):
-    p.append(f[i]/sf) 
-mean=np.inner(x,p)
-EX2=np.inner(np.square(x),p)
-var=EX2-mean**2 
-SD=np.sqrt(var)
-print("The Mean arrival rate is %.3f "%mean)
-print("The Variance of arrival from feeder is %.3f "%var) 
-print("The Standard deviation of arrival from feeder is %.3F "%SD)
+Name : Syed Muhammed Zahi
+Roll no:212221230114
 ```
 
+```
+import numpy as np
+L=[int(i) for i in input().split()]
+
+N=len(L);M=max(L)
+x=list();f=list()
+for i in range (M+1):
+  c=0
+  for j in range(N):
+    if L[j]==1:
+      c=c+1
+  f.append(c)
+  x.append(i)
+sf=np.sum(f)
+p=list()  
+
+for i in range(M+1):
+  p.append(f[i]/sf)
+mean=np.inner(x,p)
+EX2=np.inner(np.square(x),p)
+var=EX2-mean**2
+SD=np.sqrt(var)
+print("The Mean arrival rate is %.3f"%mean)
+print("The Variance of arrival from feeder is %.3f"%var)
+print("The Standard deviation of arrival from feeder is %.3f"%SD)
+```
 
 # Output : 
-![image](https://user-images.githubusercontent.com/66360846/229996276-b7515827-7d7a-4761-b436-af7a065355c2.png)
-![image](https://user-images.githubusercontent.com/66360846/229996292-8a88d4b6-1e88-4e7a-ac8e-5eb2124c6ce9.png)
+![op1](https://user-images.githubusercontent.com/94187572/230276451-ef555d43-e91e-47c3-962e-f9d29407b8c2.png)
 
-
-# Results :
-The mean and variance of arrivals of objects from feeder using probability distribution is calculated.
+# Result :
+The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
 
